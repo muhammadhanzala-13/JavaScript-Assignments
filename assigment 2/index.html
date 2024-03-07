@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+
+</head>
+<body>
+    <h1>Rules for naming JS variables</h1>
+    <p>
+        Variable names can only contain <strong>letters, digits, underscores</strong> and <strong>dollar signs</strong>.<br>
+        For example <code>$my_1stVariable</code>
+    </p>
+    <p>
+        Variables must begin with a <strong>letter, underscore</strong> or <strong>dollar sign</strong>.<br>
+        For example <code>$name
+            <div>
+
+            </div>
+            <div>
+                
+            </div>
+            <div>
+                <h1>Add Two Numbers</h1>
+    <p>Enter the first number:</p>
+    <input type="number" id="num1" />
+    <p>Enter the second number:</p>
+    <input type="number" id="num2" />
+    <button onclick="var num1 = document.getElementById('num1').value; var num2 = document.getElementById('num2').value; var sum = Number(num1) + Number(num2); alert('The sum is: ' + sum);">Add</button>
+            </div>
+    <div><h1>JS Math Expressions</h1>
+        <p id="demo"></p>
+    
+        <script>
+            var num;
+            document.getElementById("demo").innerHTML = "Value after variable declaration is: " + num;
+            num = 5;
+            document.getElementById("demo").innerHTML += "<br>Initial value: " + num;
+            num++;
+            document.getElementById("demo").innerHTML += "<br>Value after increment is: " + num;
+            num += 7;
+            document.getElementById("demo").innerHTML += "<br>Value after addition is: " + num;
+            num--;
+            document.getElementById("demo").innerHTML += "<br>Value after decrement is: " + num;
+            var remainder = num % 3;
+            document.getElementById("demo").innerHTML += "<br>The remainder is : " + remainder;
+        </script>
+        </div>
+        <div><h1 bgcolor="yellow">THORA KAM ASAN KARNA KA LIA FUNCTIONS USE KAR RAHA HU WARA TIME ZIYADA LAGTA </h1></div>
+        <div><h1>Arithmetic Operations</h1>
+            <p>Enter a number:</p>
+            <input type="number" id="num" />
+            <button onclick="performArithmeticOperations()">Perform Arithmetic Operations</button>
+            <p id="result"></p>
+        
+            <script>
+                function performArithmeticOperations() {
+                    var num = document.getElementById('num').value;
+                    var result = "";
+                    var num1 = Number(num) + 5;
+                    result += "Value after addition is: " + num1 + "<br>";
+                    var num2 = num * 10;
+                    result += "Value after multiplication is: " + num2 + "<br>";
+                    var num3 = num / 2;
+                    result += "Value after division is: " + num3 + "<br>";
+                    var num4 = num % 3;
+                    result += "Remainder after dividing by 3 is: " + num4 + "<br>";
+                    document.getElementById("result").innerHTML = result;
+                }
+            </script>
+        </div>
+        <div>
+            <h1>Subject Marks</h1>
+    <p>Enter the name of the first subject:</p>
+    <input type="text" id="sub1" />
+    <p>Enter the marks obtained in the first subject:</p>
+    <input type="number" id="obtainedMarks1" />
+    <p>Enter the name of the second subject:</p>
+    <input type="text" id="sub2" />
+    <p>Enter the marks obtained in the second subject:</p>
+    <input type="number" id="obtainedMarks2" />
+    <p>Enter the name of the third subject:</p>
+    <input type="text" id="sub3" />
+    <p>Enter the marks obtained in the third subject:</p>
+    <input type="number" id="obtainedMarks3" />
+    <button onclick="calculateTotalMarksAndPercentage()">Calculate Total Marks and Percentage</button>
+    <table id="resultTable"></table>
+
+    <script>
+        function calculateTotalMarksAndPercentage() {
+            var subject1 = document.getElementById('sub1').value;
+            var obtainedMarks1 = document.getElementById('obtainedMarks1').value;
+            var subject2 = document.getElementById('sub2').value;
+            var obtainedMarks2 = document.getElementById('obtainedMarks2').value;
+            var subject3 = document.getElementById('sub3').value;
+            var obtainedMarks3 = document.getElementById('obtainedMarks3').value;
+            var totalMarks = 300;
+            var totalObtainedMarks = Number(obtainedMarks1) + Number(obtainedMarks2) + Number(obtainedMarks3);
+            var percentage = (totalObtainedMarks / totalMarks) * 100;
+            var table = "<tr><th>Subject</th><th>Obtained Marks</th><th>Total Marks</th><th>Percentage</th></tr>";
+            table += "<tr><td>" + subject1 + "</td><td>" + obtainedMarks1 + "</td><td>100</td><td>" + percentage + "%</td></tr>";
+            table += "<tr><td>" + subject2 + "</td><td>" + obtainedMarks2 + "</td><td>100</td><td>" + percentage + "%</td></tr>";
+            table += "<tr><td>" + subject3 + "</td><td>" + obtainedMarks3 + "</td><td>100</td><td>" + percentage + "%</td></tr>";
+            table += "<tr><td>Total</td><td>" + totalObtainedMarks + "</td><td>" + totalMarks + "</td><td>" + percentage + "%</td></tr>";
+            document.getElementById("resultTable").innerHTML = table;
+        }
+    </script>
+
+        </div>
+</body>
+</html>
