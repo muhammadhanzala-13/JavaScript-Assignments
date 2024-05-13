@@ -17,7 +17,7 @@ genBtn.addEventListener("click", ()=>{
     password.value = generatePassword();
 })
 
-let allSymbols = "!@#$%^&*";
+let allSymbols = "!@#$%^&*/";
 let allNumber = "0123456789";
 let lowerChars = "abcdefghijklmnopqrstuvwxyz";
 let upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
